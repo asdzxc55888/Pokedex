@@ -16,6 +16,8 @@
 		B59355D62C93FB5600A0B221 /* CoordinatorPotocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59355D52C93FB5600A0B221 /* CoordinatorPotocol.swift */; };
 		B59355D82C93FB7900A0B221 /* PokedexCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59355D72C93FB7900A0B221 /* PokedexCoordinator.swift */; };
 		B59355DA2C93FCC900A0B221 /* PokedexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59355D92C93FCC900A0B221 /* PokedexViewController.swift */; };
+		B59355DC2C940C6C00A0B221 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59355DB2C940C6C00A0B221 /* NetworkService.swift */; };
+		B59355DE2C94128800A0B221 /* PokemonAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59355DD2C94128800A0B221 /* PokemonAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		B59355D52C93FB5600A0B221 /* CoordinatorPotocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorPotocol.swift; sourceTree = "<group>"; };
 		B59355D72C93FB7900A0B221 /* PokedexCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexCoordinator.swift; sourceTree = "<group>"; };
 		B59355D92C93FCC900A0B221 /* PokedexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexViewController.swift; sourceTree = "<group>"; };
+		B59355DB2C940C6C00A0B221 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		B59355DD2C94128800A0B221 /* PokemonAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +158,8 @@
 		B59355D32C93F5AD00A0B221 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				B59355DB2C940C6C00A0B221 /* NetworkService.swift */,
+				B59355DD2C94128800A0B221 /* PokemonAPI.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -297,7 +303,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B59355DC2C940C6C00A0B221 /* NetworkService.swift in Sources */,
 				B59355D82C93FB7900A0B221 /* PokedexCoordinator.swift in Sources */,
+				B59355DE2C94128800A0B221 /* PokemonAPI.swift in Sources */,
 				B59355D62C93FB5600A0B221 /* CoordinatorPotocol.swift in Sources */,
 				B59355DA2C93FCC900A0B221 /* PokedexViewController.swift in Sources */,
 				B59355A12C93F37300A0B221 /* AppDelegate.swift in Sources */,
