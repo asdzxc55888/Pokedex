@@ -19,24 +19,6 @@ struct PokemonListResponse: Decodable {
     }
 }
 
-struct Pokemon: Decodable {
-    let id: Int
-    let name: String
-    let sprites: Sprite
-    let types: [TypeEntry]
-    
-    struct Sprite: Decodable {
-        let front_default: String
-    }
-
-    struct TypeEntry: Decodable {
-        let type: PokemonType
-        struct PokemonType: Decodable {
-            let name: String
-        }
-    }
-}
-
 let POKEMON_MAX_INDEX = 1025
 
 class PokemonAPI {
@@ -46,7 +28,7 @@ class PokemonAPI {
         self.networkService = networkService
     }
     
-    func getPokemonImageUrl(pokemonIndex: Int) -> URL? {
+    static func getPokemonImageUrl(pokemonIndex: Int) -> URL? {
         guard pokemonIndex > 0 && pokemonIndex <= POKEMON_MAX_INDEX else {
             return nil
         }
@@ -69,13 +51,8 @@ class PokemonAPI {
         }
     }
     
-    func fetchPokemonDetails(pokemonIndex: Int, completion: @escaping (Result<Pokemon, Error>) -> Void) {
-        guard pokemonIndex > 0 && pokemonIndex <= POKEMON_MAX_INDEX else {
-            completion(.failure(NSError(domain: "PokemonAPIError", code: 2)))
-            return
-        }
-        
-        fetchPokemonDetails(pokemonURL: "", completion: completion)
+    func fetchPokemonDetails(pokemonName: String, completion: @escaping (Result<Pokemon, Error>) -> Void) {
+        fetchPokemonDetails(pokemonURL: "https://pokeapi.co/api/v2/pokemon/\(pokemonName)/", completion: completion)
     }
     
     func fetchPokemonDetails(pokemonURL: String, completion: @escaping (Result<Pokemon, Error>) -> Void) {
