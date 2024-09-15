@@ -22,6 +22,7 @@
 		B59355E42C9584E100A0B221 /* PokemonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59355E32C9584E100A0B221 /* PokemonTableViewCell.swift */; };
 		B59355E72C958B7400A0B221 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = B59355E62C958B7400A0B221 /* Kingfisher */; };
 		B59355E92C958E6900A0B221 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59355E82C958E6900A0B221 /* Pokemon.swift */; };
+		B59355EB2C96B3DD00A0B221 /* TestingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59355EA2C96B3DD00A0B221 /* TestingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		B59355DF2C95798500A0B221 /* PokedexViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexViewModel.swift; sourceTree = "<group>"; };
 		B59355E32C9584E100A0B221 /* PokemonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonTableViewCell.swift; sourceTree = "<group>"; };
 		B59355E82C958E6900A0B221 /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
+		B59355EA2C96B3DD00A0B221 /* TestingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 			children = (
 				B59355D92C93FCC900A0B221 /* PokedexViewController.swift */,
 				B59355E32C9584E100A0B221 /* PokemonTableViewCell.swift */,
+				B59355EA2C96B3DD00A0B221 /* TestingViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 				B59355DA2C93FCC900A0B221 /* PokedexViewController.swift in Sources */,
 				B59355A12C93F37300A0B221 /* AppDelegate.swift in Sources */,
 				B59355E02C95798500A0B221 /* PokedexViewModel.swift in Sources */,
+				B59355EB2C96B3DD00A0B221 /* TestingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

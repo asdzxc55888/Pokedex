@@ -49,7 +49,14 @@ final class PokemonTableViewCell: UITableViewCell {
         nameLabel.text = "NO.\(String(index + 1)) \(pokemonName.capitalized)"
         
         if let imageUrl = PokemonAPI.getPokemonImageUrl(pokemonIndex: index + 1) {
-            pokemonImageView.kf.setImage(with: imageUrl)
+            pokemonImageView.kf.setImage(
+                with: imageUrl,
+                options: [
+                        .processor(DownsamplingImageProcessor(size: pokemonImageView.bounds.size)), // 適配圖片大小
+                        .scaleFactor(UIScreen.main.scale),
+                        .cacheOriginalImage
+                    ]
+            )
         }
         // pokemonAPI.fetchPokemonDetails(pokemonName: pokemonName) { [weak self] result in
         //     switch result {

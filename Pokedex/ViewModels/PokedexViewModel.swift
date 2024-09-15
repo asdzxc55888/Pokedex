@@ -20,24 +20,28 @@ class PokedexViewModel {
     var pokemonList: [PokemonListResponse.PokemonResult] = []
     var onPokemonListUpdate: ((_ updateCount: Int) -> Void)?
     
-    private var debounceTimer: Timer?
+    //MARK: throttle prevent fetch too many times in a moment.
+    private var throttleTimer: Timer?
+    private var isThrottling = false
     
     func fetchPokemonList(limit: Int = 20) {
-        debounceTimer?.invalidate()
+        guard !isThrottling else { return }
         
-        debounceTimer = Timer.scheduledTimer(withTimeInterval: 0.2, repeats: false) { [weak self] _ in
-            guard let self = self else { return }
-            
-            pokemonAPI.fetchPokemonList(offset: self.currentPokemonListOffset, limit: limit) { [weak self] result in
-                switch result {
-                case .success(let pokemonList):
-                    self?.pokemonListResponse = pokemonList
-                case .failure(let error):
-                    print("Failed to fetch Pokemon list: \(error)")
-                }
-            }
-            
-            currentPokemonListOffset += limit
+        isThrottling = true
+        
+        throttleTimer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false) { [weak self] _ in
+            self?.isThrottling = false
         }
+        
+        pokemonAPI.fetchPokemonList(offset: self.currentPokemonListOffset, limit: limit) { [weak self] result in
+            switch result {
+            case .success(let pokemonList):
+                self?.pokemonListResponse = pokemonList
+            case .failure(let error):
+                print("Failed to fetch Pokemon list: \(error)")
+            }
+        }
+        
+        currentPokemonListOffset += limit
     }
 }

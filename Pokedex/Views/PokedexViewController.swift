@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 final class PokedexViewController: UIViewController {
     var pokedexCoordinator: PokedexCoordinator?
@@ -87,5 +88,13 @@ extension PokedexViewController: UITableViewDataSource {
         let pokemon = viewModel.pokemonList[indexPath.row]
         cell.configure(with: pokemon.name, index: indexPath.row)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let pokemon = viewModel.pokemonList[indexPath.row]
+        
+        if let imageUrl = PokemonAPI.getPokemonImageUrl(pokemonIndex: indexPath.row + 1) {
+            ImageCache.default.removeImage(forKey: imageUrl.absoluteString)
+        }
     }
 }

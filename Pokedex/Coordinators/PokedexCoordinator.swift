@@ -16,6 +16,15 @@ struct PokedexCoordinator: Coordinator {
 
     // TODO: show pokedex view
     func start() {
+        let viewController = TestingViewController()
+        viewController.pokedexCoordinator = self
+        navigationController.pushViewController(viewController, animated: true)
+        //let pokedexViewController = PokedexViewController()
+        //pokedexViewController.pokedexCoordinator = self
+        //navigationController.pushViewController(pokedexViewController, animated: true)
+    }
+    
+    func navigateToPokedex() {
         let pokedexViewController = PokedexViewController()
         pokedexViewController.pokedexCoordinator = self
         navigationController.pushViewController(pokedexViewController, animated: true)
@@ -23,6 +32,10 @@ struct PokedexCoordinator: Coordinator {
     
     // TODO: navigate to pokedex number view
     func navigateToPokedexNumber() {
+    }
+    
+    func goBack() {
+        navigationController.popViewController(animated: true)
     }
 }
 
