@@ -7,9 +7,10 @@
 
 import Foundation
 
-class PokedexViewModel {
+final class PokedexViewModel {
     private let pokemonAPI = PokemonAPI(networkService: NetworkService())
     private var currentPokemonListOffset = 0
+    
     var pokemonListResponse: PokemonListResponse? {
         didSet {
             let newList =  pokemonListResponse?.results ?? []
@@ -18,6 +19,7 @@ class PokedexViewModel {
         }
     }
     var pokemonList: [PokemonListResponse.PokemonResult] = []
+    var loadingState: LoadingState = .idle
     var onPokemonListUpdate: ((_ updateCount: Int) -> Void)?
     
     //MARK: throttle prevent fetch too many times in a moment.
@@ -28,8 +30,9 @@ class PokedexViewModel {
         guard !isThrottling else { return }
         
         isThrottling = true
+        loadingState = .loading
         
-        throttleTimer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false) { [weak self] _ in
+        throttleTimer = Timer.scheduledTimer(withTimeInterval: 0.2, repeats: false) { [weak self] _ in
             self?.isThrottling = false
         }
         
@@ -40,8 +43,17 @@ class PokedexViewModel {
             case .failure(let error):
                 print("Failed to fetch Pokemon list: \(error)")
             }
+            
+            self?.loadingState = .idle
         }
         
         currentPokemonListOffset += limit
+    }
+}
+
+extension PokedexViewModel {
+    enum LoadingState {
+        case loading
+        case idle
     }
 }
