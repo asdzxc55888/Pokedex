@@ -23,8 +23,22 @@ struct Pokemon: Decodable {
 
     struct TypeEntry: Decodable {
         let type: PokemonType
-        struct PokemonType: Decodable {
-            let name: String
+        
+        init(from decoder: Decoder) throws {
+            let container = try decoder.container(keyedBy: CodingKeys.self)
+            let typeContainer = try container.nestedContainer(keyedBy: TypeKeys.self, forKey: .type)
+            let typeName = try typeContainer.decode(String.self, forKey: .name)
+            
+            self.type = PokemonType(rawValue: typeName) ?? .unknown
         }
+        
+        private enum CodingKeys: String, CodingKey {
+            case type
+        }
+        
+        private enum TypeKeys: String, CodingKey {
+            case name
+        }
+        
     }
 }

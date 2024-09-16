@@ -24,6 +24,9 @@
 		B59355E92C958E6900A0B221 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59355E82C958E6900A0B221 /* Pokemon.swift */; };
 		B59355EB2C96B3DD00A0B221 /* TestingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59355EA2C96B3DD00A0B221 /* TestingViewController.swift */; };
 		B59355ED2C98022A00A0B221 /* LoadingMoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59355EC2C98022A00A0B221 /* LoadingMoreTableViewCell.swift */; };
+		B59355EF2C981AAD00A0B221 /* PokemonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59355EE2C981AAD00A0B221 /* PokemonType.swift */; };
+		B59355F12C981CCD00A0B221 /* PokemonTypeTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59355F02C981CCD00A0B221 /* PokemonTypeTag.swift */; };
+		B59355F42C981F4600A0B221 /* UIColor+hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59355F32C981F4600A0B221 /* UIColor+hex.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +67,9 @@
 		B59355E82C958E6900A0B221 /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 		B59355EA2C96B3DD00A0B221 /* TestingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingViewController.swift; sourceTree = "<group>"; };
 		B59355EC2C98022A00A0B221 /* LoadingMoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingMoreTableViewCell.swift; sourceTree = "<group>"; };
+		B59355EE2C981AAD00A0B221 /* PokemonType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonType.swift; sourceTree = "<group>"; };
+		B59355F02C981CCD00A0B221 /* PokemonTypeTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonTypeTag.swift; sourceTree = "<group>"; };
+		B59355F32C981F4600A0B221 /* UIColor+hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+hex.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +125,7 @@
 				B59355A02C93F37300A0B221 /* AppDelegate.swift */,
 				B59355A92C93F37400A0B221 /* Assets.xcassets */,
 				B59355D42C93F5B700A0B221 /* Coordinators */,
+				B59355F22C981F2600A0B221 /* Extensions */,
 				B59355AB2C93F37400A0B221 /* LaunchScreen.storyboard */,
 				B59355D02C93F58A00A0B221 /* Models */,
 				B59355D32C93F5AD00A0B221 /* Services */,
@@ -149,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				B59355E82C958E6900A0B221 /* Pokemon.swift */,
+				B59355EE2C981AAD00A0B221 /* PokemonType.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -156,10 +164,11 @@
 		B59355D12C93F59200A0B221 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B59355EC2C98022A00A0B221 /* LoadingMoreTableViewCell.swift */,
 				B59355D92C93FCC900A0B221 /* PokedexViewController.swift */,
 				B59355E32C9584E100A0B221 /* PokemonTableViewCell.swift */,
+				B59355F02C981CCD00A0B221 /* PokemonTypeTag.swift */,
 				B59355EA2C96B3DD00A0B221 /* TestingViewController.swift */,
-				B59355EC2C98022A00A0B221 /* LoadingMoreTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -188,6 +197,14 @@
 				B59355D72C93FB7900A0B221 /* PokedexCoordinator.swift */,
 			);
 			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		B59355F22C981F2600A0B221 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B59355F32C981F4600A0B221 /* UIColor+hex.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,9 +346,12 @@
 				B59355DC2C940C6C00A0B221 /* NetworkService.swift in Sources */,
 				B59355E42C9584E100A0B221 /* PokemonTableViewCell.swift in Sources */,
 				B59355D82C93FB7900A0B221 /* PokedexCoordinator.swift in Sources */,
+				B59355EF2C981AAD00A0B221 /* PokemonType.swift in Sources */,
 				B59355DE2C94128800A0B221 /* PokemonAPI.swift in Sources */,
 				B59355D62C93FB5600A0B221 /* CoordinatorPotocol.swift in Sources */,
 				B59355E92C958E6900A0B221 /* Pokemon.swift in Sources */,
+				B59355F42C981F4600A0B221 /* UIColor+hex.swift in Sources */,
+				B59355F12C981CCD00A0B221 /* PokemonTypeTag.swift in Sources */,
 				B59355DA2C93FCC900A0B221 /* PokedexViewController.swift in Sources */,
 				B59355A12C93F37300A0B221 /* AppDelegate.swift in Sources */,
 				B59355E02C95798500A0B221 /* PokedexViewModel.swift in Sources */,
