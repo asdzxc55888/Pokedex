@@ -20,6 +20,7 @@ final class PokemonTableViewCell: UITableViewCell {
     
     private let nameLabel: UILabel = {
         let label = UILabel()
+        label.textColor = .white
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -53,17 +54,17 @@ final class PokemonTableViewCell: UITableViewCell {
         
         stackView.addArrangedSubview(nameLabel)
         
+        contentView.backgroundColor = CustomColor.skyblue
         contentView.addSubview(pokemonImageView)
         contentView.addSubview(stackView)
         
-        // 設置 ImageView 和 Label 的約束條件
         NSLayoutConstraint.activate([
-            pokemonImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
+            pokemonImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8),
             pokemonImageView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
             pokemonImageView.widthAnchor.constraint(equalToConstant: 80),
             pokemonImageView.heightAnchor.constraint(equalToConstant: 80),
             
-            stackView.leadingAnchor.constraint(equalTo: pokemonImageView.trailingAnchor, constant: 10),
+            stackView.leadingAnchor.constraint(equalTo: pokemonImageView.trailingAnchor, constant: 8),
             stackView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
         ])
     }

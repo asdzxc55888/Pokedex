@@ -27,6 +27,7 @@
 		B59355EF2C981AAD00A0B221 /* PokemonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59355EE2C981AAD00A0B221 /* PokemonType.swift */; };
 		B59355F12C981CCD00A0B221 /* PokemonTypeTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59355F02C981CCD00A0B221 /* PokemonTypeTag.swift */; };
 		B59355F42C981F4600A0B221 /* UIColor+hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59355F32C981F4600A0B221 /* UIColor+hex.swift */; };
+		B59355F72C9831E800A0B221 /* CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59355F62C9831E800A0B221 /* CustomColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		B59355EE2C981AAD00A0B221 /* PokemonType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonType.swift; sourceTree = "<group>"; };
 		B59355F02C981CCD00A0B221 /* PokemonTypeTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonTypeTag.swift; sourceTree = "<group>"; };
 		B59355F32C981F4600A0B221 /* UIColor+hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+hex.swift"; sourceTree = "<group>"; };
+		B59355F62C9831E800A0B221 /* CustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 		B593559F2C93F37300A0B221 /* Pokedex */ = {
 			isa = PBXGroup;
 			children = (
+				B59355F52C9831DA00A0B221 /* Appearences */,
 				B59355AE2C93F37400A0B221 /* Info.plist */,
 				B59355A02C93F37300A0B221 /* AppDelegate.swift */,
 				B59355A92C93F37400A0B221 /* Assets.xcassets */,
@@ -205,6 +208,14 @@
 				B59355F32C981F4600A0B221 /* UIColor+hex.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B59355F52C9831DA00A0B221 /* Appearences */ = {
+			isa = PBXGroup;
+			children = (
+				B59355F62C9831E800A0B221 /* CustomColor.swift */,
+			);
+			path = Appearences;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -351,6 +362,7 @@
 				B59355D62C93FB5600A0B221 /* CoordinatorPotocol.swift in Sources */,
 				B59355E92C958E6900A0B221 /* Pokemon.swift in Sources */,
 				B59355F42C981F4600A0B221 /* UIColor+hex.swift in Sources */,
+				B59355F72C9831E800A0B221 /* CustomColor.swift in Sources */,
 				B59355F12C981CCD00A0B221 /* PokemonTypeTag.swift in Sources */,
 				B59355DA2C93FCC900A0B221 /* PokedexViewController.swift in Sources */,
 				B59355A12C93F37300A0B221 /* AppDelegate.swift in Sources */,

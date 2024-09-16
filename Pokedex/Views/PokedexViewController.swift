@@ -18,7 +18,7 @@ final class PokedexViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .white
+        view.backgroundColor = CustomColor.skyblue
         
         setupStackView()
         setupTableView()
@@ -99,6 +99,7 @@ extension PokedexViewController: UITableViewDataSource {
                 return UITableViewCell()
             }
             cell.startLoading()
+            cell.backgroundColor = CustomColor.skyblue
             return cell
         } else {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "PokemonCell", for: indexPath) as? PokemonTableViewCell else {
